@@ -1,0 +1,123 @@
+[
+  {
+    "id": 1,
+    "name": "Guy-Manuel de Homem-Christo",
+    "birthday": "08-02-1974",
+    "activeSince": 1992,
+    "genres": ["House", "Techno", "Dance", "Pop", "Disco"],
+    "labels": ["Daft Life", "Columbia", "Virgin", "Soma"],
+    "website": "https:///daftpunk.com",
+    "image": "https://i.discogs.com/2nVMuJRb7EQvHyV5Uno8fdoRQonZ13GboCJFvK4xTZY/rs:fit/g:sm/q:90/h:600/w:471/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQyNDI3/OC0xNDI2MzkwNzg3/LTEzMjcuanBlZw.jpeg",
+    "shortDescription": "Guy-Manuel de Homem-Christo was born on February 8, 1974 in Paris, France. In 1992 he recorded together with his schoolmates Thomas Bangalter and Laurent Brancowitz (Part of Phoenix) his first two songs under the name Darlin', which were released on the compilation \"Shimmies In Super 8\" on Duophonic. The song Darlin' was called \"a bunch of daft punk\" by a reviewer in the UK music magazine Melody Maker. Guy-Manuel de Homem-Cristo and Thomas Bangalter adopted the expression \"Daft Punk\" as their next band name. In 1993 their first single \"The New Wave\" was released on Soma Quality Recordings. In 1997 he and his friend Eric Chedeville created the label Crydamoure, where they released their music under the name Le Knight Club and supported other French newcomers.Guy Manuel is the brother of Paul De Homem-Christo AKA Play Paul."
+  },
+  {
+    "id": 2,
+    "name": "Eric Clapton",
+    "birthday": "30-03-1945",
+    "activeSince": 1963,
+    "genres": ["Rock", "Blues"],
+    "labels": ["Polydor", "Atco", "RSO", "Warner Bros.", "Duck", "Reprise", "Surfdog"],
+    "website": "https:///ericclapton.com",
+    "image": "https://i.discogs.com/lWxPlsWaWKUaT3Te3gXeasP2ijCX9Ge-UCnp71FLLyw/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3ODI3/LTE2MzgzMDIwMDIt/MzIzNS5qcGVn.jpeg",
+    "shortDescription": "Prolific English blues-rock guitarist, singer, songwriter/composer, and producer, affectionately known as \"Slow Hand\". Recipient of eighteen Grammy, four Ivor Novello awards, and the Brit Award for Outstanding Contribution to Music. Three times inducted into Rock And Roll Hall of Fame in 2000 (Solo artist, Performer with The Yardbirds, Performer with Cream (2)). Inducted into Songwriters Hall of Fame in 2001. Received the Order of the British Empire (CBE-Commander) in 2004."
+  },
+  {
+    "id": 3,
+    "name": "Taylor Swift",
+    "birthday": "December 13, 1989",
+    "activeSince": 2006,
+    "genres": ["Pop", "Country"],
+    "labels": ["Republic Records", "Big Machine Records"],
+    "website": "https://www.taylorswift.com/",
+    "image": "https://i.discogs.com/xB5XzPcHrWyHoHBkRDozwLeYRb_18WpPZpVQEGzv4pw/rs:fit/g:sm/q:90/h:600/w:428/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTExMjQ2/NDUtMTY4MzE5NjQz/NS05NzY0LmpwZWc.jpeg",
+    "shortDescription": "Taylor Swift is a Grammy-winning singer-songwriter known for her narrative songwriting and blending of country and pop styles."
+  },
+  {
+    "id": 4,
+    "name": "Bob Marley",
+    "birthday": "February 6, 1945",
+    "activeSince": 1962,
+    "genres": ["Reggae"],
+    "labels": ["Tuff Gong", "Island Records"],
+    "website": "https://www.bobmarley.com/",
+    "image": "https://i.discogs.com/LZgSxfin2A-_HxEu-fBWdjpj7xQcxrBKQI0Np32b9hQ/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTQxNDQx/LTE0MTY2OTYxMzMt/Nzc4OS5qcGVn.jpeg",
+    "shortDescription": "Bob Marley was a Jamaican musician and cultural icon, widely recognized for popularizing reggae music worldwide."
+  },
+  {
+    "id": 5,
+    "name": "Cat Stevens",
+    "birthday": "July 21, 1948",
+    "activeSince": 1966,
+    "genres": ["Folk", "Rock"],
+    "labels": ["Island Records", "A&M Records"],
+    "website": "https://www.catstevens.com/",
+    "image": "https://i.discogs.com/pZIWi337X0eYOOib-JZ7zjMFwG9zVDsSsB5OeTM4Qlg/rs:fit/g:sm/q:90/h:500/w:410/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM3NjA2/LTEyNTIyMzg0NTIu/anBlZw.jpeg",
+    "shortDescription": "Cat Stevens, also known as Yusuf Islam, is a singer-songwriter known for his folk and rock music and spiritual themes."
+  },
+  {
+    "id": 6,
+    "name": "Bob Dylan",
+    "birthday": "May 24, 1941",
+    "activeSince": 1961,
+    "genres": ["Folk", "Rock"],
+    "labels": ["Columbia Records"],
+    "website": "https://bobdylan.com/",
+    "image": "https://i.discogs.com/aOTlXTm6Ma2USj_1o-1-nnGtQPpr2Ea30bu_BGqL9Jw/rs:fit/g:sm/q:90/h:554/w:498/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTU5Nzky/LTE1OTgxNTU1Mjgt/MzIzMy5qcGVn.jpeg",
+    "shortDescription": "Bob Dylan is a legendary singer-songwriter and musician, considered one of the most influential figures in contemporary music."
+  },
+  {
+    "id": 7,
+    "name": "Norah Jones",
+    "birthday": "March 30, 1979",
+    "activeSince": 2002,
+    "genres": ["Jazz", "Pop", "Blues"],
+    "labels": ["Blue Note Records"],
+    "website": "https://www.norahjones.com/",
+    "image": "https://i.discogs.com/Q0bQiyRI4nFojIOMbXLdkmmofeOwsV6WSCh9SDReeuY/rs:fit/g:sm/q:90/h:600/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE0NzAz/MS0xMzM3MjczMDEy/LTI3NTIuanBlZw.jpeg",
+    "shortDescription": "Norah Jones is a multi-genre artist known for her soulful vocals and fusion of jazz, pop, and blues elements."
+  },
+  {
+    "id": 8,
+    "name": "Tracy Chapman",
+    "birthday": "March 30, 1964",
+    "activeSince": 1986,
+    "genres": ["Folk", "Rock"],
+    "labels": ["Elektra Records"],
+    "website": "https://www.tracychapman.com/",
+    "image": "https://i.discogs.com/ZzVrw53APOjVs3QugF4M57afbATcSMEzQYUVF0e-Vrk/rs:fit/g:sm/q:90/h:400/w:301/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE2MTA5/MS0xNDAwMzQ0MzQx/LTc4NjAuanBlZw.jpeg",
+    "shortDescription": "Tracy Chapman is a singer-songwriter celebrated for her socially conscious lyrics and folk-rock musical style."
+  },
+  {
+    "id": 9,
+    "name": "Drake",
+    "birthday": "October 24, 1986",
+    "activeSince": 2001,
+    "genres": ["Hip-hop", "R&B"],
+    "labels": ["OVO Sound", "Republic Records"],
+    "website": "https://www.drakeofficial.com/",
+    "image": "https://i.discogs.com/Dlt-kor5Zqfen9tulh91C9XYLtmwO9Qt-a6UHeeAAzw/rs:fit/g:sm/q:90/h:340/w:396/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE1MTE5/OS0xNTA1ODQ4MDQ4/LTI0OTguanBlZw.jpeg",
+    "shortDescription": "Drake is a Canadian rapper, singer, and songwriter known for his rap and R&B music as well as his commercial success."
+  },
+  {
+    "id": 10,
+    "name": "Eminem",
+    "birthday": "October 17, 1972",
+    "activeSince": 1988,
+    "genres": ["Hip-hop"],
+    "labels": ["Shady Records", "Aftermath Entertainment"],
+    "website": "https://eminem.com/",
+    "image": "https://i.discogs.com/4B5kcHkjYnEcc_Z5-0M6n07ZrdpLRgQV5mH8fGrs7Ig/rs:fit/g:sm/q:90/h:600/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4NjYx/LTE2Nzg5NTY0NTAt/MjYxOC5qcGVn.jpeg",
+    "shortDescription": "Eminem is a globally renowned rapper and songwriter known for his intricate lyrics and significant impact on hip-hop culture."
+  },
+  {
+    "id": 11,
+    "name": "Gustavo Santaolalla",
+    "birthday": "August 19, 1951",
+    "activeSince": 1967,
+    "genres": ["Alternative", "Folk", "Rock", "Soundtrack"],
+    "labels": ["Nonesuch Records"],
+    "website": "https://www.gustavosantaolalla.com/",
+    "image": "https://i.discogs.com/xrxRnaN_b54HDmLJBYxjvfYlc1_BqBaPvodSVFgSleA/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNTI3/Mi0xNjYwMTI3MzIw/LTEzMTYuanBlZw.jpeg",
+    "shortDescription": "Gustavo Santaolalla is an Argentine musician known for his alternative and folk-rock music, as well as his notable film soundtrack compositions."
+  }
+]
