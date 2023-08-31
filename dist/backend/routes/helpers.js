@@ -8,26 +8,25 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import fs from "fs/promises";
-function readArtists() {
+function readFile(file) {
     return __awaiter(this, void 0, void 0, function* () {
-        console.log("readArtists function called");
-        const data = yield fs.readFile('./data/artists.json');
-        console.log(data.toString());
+        const data = yield fs.readFile(`./dist/backend/data/${file}.json`);
+        return JSON.parse(data.toString());
     });
 }
-function writeArtists(artists) {
+function writeFile(file, list) {
     return __awaiter(this, void 0, void 0, function* () {
-        yield fs.writeFile('./data/artists.json', JSON.stringify(artists, null, 2));
+        yield fs.writeFile(`./dist/backend/data/${file}.json`, JSON.stringify(list, null, 2));
     });
 }
-function createId(artists) {
+function createId(list) {
     const newId = Math.floor(Math.random() * 1000000);
-    const idExists = artists.find(a => a.id === newId);
+    const idExists = list.find(item => item.id === newId);
     if (!idExists) {
         return newId;
     }
     else {
-        return createId(artists);
+        return createId(list);
     }
 }
-export { readArtists, writeArtists, createId };
+export { readFile, writeFile, createId };

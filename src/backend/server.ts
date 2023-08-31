@@ -3,7 +3,7 @@ import express from 'express';
 import cors from 'cors';
 
 // import routes
-import router from './routes/routes.js';
+import { router, artistRouter, favoriteRouter } from './routes/routes.js';
 
 // create express app
 const app = express();
@@ -15,10 +15,10 @@ app.use(cors());
 app.use(express.json());
 
 // serve static files
-app.use(express.static('./public'));
+app.use(express.static('./dist/frontend'));
 
 // define routes
-app.use('/', router);
+app.use('/', router, artistRouter, favoriteRouter);
 
 // start express server
 const port = 3000;

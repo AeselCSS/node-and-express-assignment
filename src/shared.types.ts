@@ -1,6 +1,6 @@
 // shared interface for artist objects
 interface Artist {
-    id: number;
+    id?: number;
     name: string;
     birthday: Date;
     activeSince: number;
@@ -9,4 +9,9 @@ interface Artist {
     website: string;
     image: string;
     shortDescription: string;
+}
+
+interface Favorite {
+    id: number;
+    readonly artistId: number;
 }

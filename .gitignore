@@ -335,3 +335,7 @@ $RECYCLE.BIN/
 # End of https://www.toptal.com/developers/gitignore/api/macos,windows,node,visualstudiocode,intellij
 /package-lock.json
 /qodana.yaml
+/.idea/vcs.xml
+/.idea/node-and-express-assignment.iml
+/.idea/modules.xml
+/.idea/.gitignore
