@@ -11,7 +11,44 @@
 <body>
     <header>
         <h1>Artist CRUD with Node and Express</h1>
+        <nav>
+            <div class="search-container">
+                <input type="text" id="searchbar" placeholder="Search"/>
+                <div class="filter-container">
+                    <label for="filter">Filter by:</label>
+                    <select name="filter" id="filter">
+                        <option value="name">Name</option>
+                        <option value="genre">Genre</option>
+                        <option value="label">Label</option>
+                    </select>
+                </div>
+                <div class="sort-container">
+                    <label for="sort">Sort by:</label>
+                    <select name="sort" id="sort">
+                        <option value="name">Name</option>
+                        <option value="genre">Genre</option>
+                        <option value="label">Label</option>
+                        <option value="careerStart">Career Start</option>
+                    </select>
+                </div>
+            </div>
+            <div class="add-container">
+                <button id="add">Add Artist</button>
+            </div>
+        </nav>
     </header>
 
+<main>
+<!--  artist grid  -->
+    <section class="artist-grid"></section>
+<!--  dialog window  -->
+    <dialog class="modal" id="dialog-modal">
+            <button class="close">X</button>
+            <section id="dialog-modal-content"></section>
+    </dialog>
+</main>
+<footer>
+    <p>Created by <a href="https://github.com/AeselCSS">Chris Skov Sørensen</a></p>
+</footer>
 </body>
 </html>
