@@ -1,5 +1,7 @@
 import {showArtist} from "./show-artist.js";
 import {isFavorite} from "./is-favorite.js";
+import {deleteArtist} from "./delete-artist.js";
+import {editArtist} from "./edit-artist.js";
 
 async function showArtists(artists: Artist[]) {
     const artistGrid: Element | null = document.querySelector('.artist-grid');
@@ -44,11 +46,11 @@ async function showArtists(artists: Artist[]) {
             });
 
             artistGrid.querySelector(`.artist-card-edit-button[data-id="${artist.id}"]`)?.addEventListener('click', () => {
-                console.log(`Edit artist with Id: ${artist.id}`);
+                editArtist(artistId);
             });
 
             artistGrid.querySelector(`.artist-card-delete-button[data-id="${artist.id}"]`)?.addEventListener('click', () => {
-                console.log(`Delete artist with Id: ${artist.id}`);
+                deleteArtist(artistId);
             });
         }
     }
