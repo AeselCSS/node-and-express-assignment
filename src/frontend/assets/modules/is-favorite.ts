@@ -19,6 +19,6 @@ async function isFavorite(artistId: number): Promise<boolean> {
     }) ?? false;
 }
 
-export { isFavorite };
+export { isFavorite, favorites };
 
 
