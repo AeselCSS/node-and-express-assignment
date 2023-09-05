@@ -8,15 +8,19 @@ router.get('/', (_req, res) => {
 });
 artistRouter.get('/artists', async (_req, res) => {
     const artists = await readFile('artists');
-    res.json(artists);
+    if (!artists) {
+        res.status(404).json({ message: 'No artists found' });
+        return;
+    }
+    res.status(200).json(artists);
 });
 artistRouter.get('/artists/:id', async (req, res) => {
     const artists = await readFile('artists');
     const artist = artists.find(a => a.id === parseInt(req.params.id));
     if (!artist) {
-        res.status(404).end();
+        res.status(404).json({ message: `Artist with id ${req.params.id} not found` });
     }
-    res.json(artist);
+    res.status(200).json(artist);
 });
 artistRouter.post('/artists', async (req, res) => {
     const artists = await readFile('artists');
@@ -24,13 +28,13 @@ artistRouter.post('/artists', async (req, res) => {
     newArtist.id = createId(artists);
     artists.push(newArtist);
     await writeFile('artists', artists);
-    res.status(201).json(newArtist);
+    res.status(201).json(artists);
 });
 artistRouter.put('/artists/:id', async (req, res) => {
     const artists = await readFile('artists');
     const artist = artists.find(a => a.id === parseInt(req.params.id));
     if (!artist) {
-        res.status(404).end();
+        res.status(404).json({ message: `Artist with id ${req.params.id} not found` });
         return;
     }
     const updatedArtist = req.body;
@@ -38,19 +42,19 @@ artistRouter.put('/artists/:id', async (req, res) => {
     const index = artists.indexOf(artist);
     artists.splice(index, 1, updatedArtist);
     await writeFile('artists', artists);
-    res.json(updatedArtist);
+    res.status(200).json(artists);
 });
 artistRouter.delete('/artists/:id', async (req, res) => {
     const artists = await readFile('artists');
     const artist = artists.find(a => a.id === parseInt(req.params.id));
     if (!artist) {
-        res.status(404).end();
+        res.status(404).json({ message: `Artist with id ${req.params.id} not found` });
         return;
     }
     const index = artists.indexOf(artist);
     artists.splice(index, 1);
     await writeFile('artists', artists);
-    res.status(204).end();
+    res.status(200).json(artists);
 });
 favoriteRouter.get('/favorites', async (_req, res) => {
     const favorites = await readFile('favorites');
@@ -62,18 +66,18 @@ favoriteRouter.post('/favorites', async (req, res) => {
     newFavorite.id = createId(favorites);
     favorites.push(newFavorite);
     await writeFile('favorites', favorites);
-    res.status(201).json(newFavorite);
+    res.status(201).json(favorites);
 });
 favoriteRouter.delete('/favorites/:id', async (req, res) => {
     const favorites = await readFile('favorites');
     const favorite = favorites.find(f => f.id === parseInt(req.params.id));
     if (!favorite) {
-        res.status(404).end();
+        res.status(404).json({ message: `Favorite with id ${req.params.id} not found` });
         return;
     }
     const index = favorites.indexOf(favorite);
     favorites.splice(index, 1);
     await writeFile('favorites', favorites);
-    res.status(204).end();
+    res.status(204).json(favorites);
 });
 export { router, artistRouter, favoriteRouter };

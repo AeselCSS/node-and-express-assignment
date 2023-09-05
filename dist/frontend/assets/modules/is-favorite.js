@@ -11,4 +11,4 @@ async function isFavorite(artistId) {
         return favorite.artistId === artistId;
     }) ?? false;
 }
-export { isFavorite };
+export { isFavorite, favorites };
