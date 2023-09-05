@@ -17,17 +17,20 @@ router.get('/', (_req, res) => {
 // artist CRUD
 artistRouter.get('/artists', async (_req, res) => {
     const artists = await readFile('artists');
-    // console.log(artists);
-    res.json(artists);
+    if (!artists) {
+        res.status(404).json({message: 'No artists found'});
+        return;
+    }
+    res.status(200).json(artists);
 });
 
 artistRouter.get('/artists/:id', async (req, res) => {
     const artists: Artist[] = await readFile('artists');
     const artist: Artist | undefined = artists.find(a => a.id === parseInt(req.params.id));
     if (!artist) {
-        res.status(404).end();
+        res.status(404).json({message: `Artist with id ${req.params.id} not found`});
     }
-    res.json(artist);
+    res.status(200).json(artist);
 });
 
 artistRouter.post('/artists', async (req, res) => {
@@ -36,14 +39,15 @@ artistRouter.post('/artists', async (req, res) => {
     newArtist.id = createId(artists);
     artists.push(newArtist);
     await writeFile('artists', artists);
-    res.status(201).json(newArtist);
+    // TODO: validate Artist from req.body - if invalid, return 400
+    res.status(201).json(artists);
 });
 
 artistRouter.put('/artists/:id', async (req, res) => {
     const artists: Artist[] = await readFile('artists');
     const artist: Artist | undefined = artists.find(a => a.id === parseInt(req.params.id));
     if (!artist) {
-        res.status(404).end();
+        res.status(404).json({message: `Artist with id ${req.params.id} not found`});
         return;
     }
     const updatedArtist: Artist = req.body;
@@ -53,14 +57,14 @@ artistRouter.put('/artists/:id', async (req, res) => {
     artists.splice(index, 1, updatedArtist);
     // write to file
     await writeFile('artists', artists);
-    res.json(updatedArtist);
+    res.status(200).json(artists);
 });
 
 artistRouter.delete('/artists/:id', async (req, res) => {
     const artists: Artist[] = await readFile('artists');
     const artist: Artist | undefined = artists.find(a => a.id === parseInt(req.params.id));
     if (!artist) {
-        res.status(404).end();
+        res.status(404).json({message: `Artist with id ${req.params.id} not found`});
         return;
     }
     // delete artist from array
@@ -68,7 +72,7 @@ artistRouter.delete('/artists/:id', async (req, res) => {
     artists.splice(index, 1);
     // write to file
     await writeFile('artists', artists);
-    res.status(204).end();
+    res.status(200).json(artists);
 });
 
 // favorite CRUD
@@ -83,14 +87,14 @@ favoriteRouter.post('/favorites', async (req, res) => {
     newFavorite.id = createId(favorites);
     favorites.push(newFavorite);
     await writeFile('favorites', favorites);
-    res.status(201).json(newFavorite);
+    res.status(201).json(favorites);
 });
 
 favoriteRouter.delete('/favorites/:id', async (req, res) => {
     const favorites: Favorite[] = await readFile('favorites');
     const favorite: Favorite | undefined = favorites.find(f => f.id === parseInt(req.params.id));
     if (!favorite) {
-        res.status(404).end();
+        res.status(404).json({message: `Favorite with id ${req.params.id} not found`});
         return;
     }
     // delete favorite from array
@@ -98,7 +102,7 @@ favoriteRouter.delete('/favorites/:id', async (req, res) => {
     favorites.splice(index, 1);
     // write to file
     await writeFile('favorites', favorites);
-    res.status(204).end();
+    res.status(204).json(favorites);
 });
 
 export {router, artistRouter, favoriteRouter};
