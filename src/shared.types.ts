@@ -2,7 +2,7 @@
 interface Artist {
     id?: number;
     name: string;
-    birthday: Date;
+    birthday: string;
     activeSince: number;
     genres: string[];
     labels: string[];
