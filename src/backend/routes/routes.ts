@@ -102,7 +102,7 @@ favoriteRouter.delete('/favorites/:id', async (req, res) => {
     favorites.splice(index, 1);
     // write to file
     await writeFile('favorites', favorites);
-    res.status(204).json(favorites);
+    res.status(200).json(favorites);
 });
 
 export {router, artistRouter, favoriteRouter};
