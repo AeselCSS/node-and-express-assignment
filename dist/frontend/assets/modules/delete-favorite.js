@@ -1,5 +1,6 @@
 import { destroy } from "./api.js";
 import { favorites } from "./is-favorite.js";
+import { refreshFavorites } from "./update-lists.js";
 async function deleteFavorite(artistId) {
     if (!favorites) {
         console.error('Favorites is null or undefined');
@@ -21,5 +22,6 @@ async function deleteFavorite(artistId) {
         return;
     }
     console.log('Favorite deleted');
+    await refreshFavorites(response);
 }
 export { deleteFavorite };
