@@ -13,10 +13,10 @@
         <h1>CRUD app with Node and Express</h1>
         <nav>
             <div class="search-container">
-                <label for="searchbar"></label>
+                <label for="searchbar"><img src="assets/svg/search_white.svg" alt="Search"></label>
                 <input type="text" id="searchbar" placeholder="Search"/>
                 <div class="filter-container">
-                    <label for="filter">Filter by:</label>
+                    <label for="filter"><img src="assets/svg/filter_alt_white.svg" alt="filter"></label>
                     <select name="filter" id="filter">
                         <option value="name">Name</option>
                         <option value="genre">Genre</option>
@@ -24,7 +24,7 @@
                     </select>
                 </div>
                 <div class="sort-container">
-                    <label for="sort">Sort by:</label>
+                    <label for="sort"><img src="assets/svg/sort_white.svg" alt="sort"></label>
                     <select name="sort" id="sort">
                         <option value="name">Name</option>
                         <option value="genre">Genre</option>
@@ -34,7 +34,7 @@
                 </div>
             </div>
             <div class="add-container">
-                <button id="add">Add Artist</button>
+                <button id="add"><img src="assets/svg/add_black.svg" alt="Add Artist"></button>
             </div>
         </nav>
     </header>
@@ -44,12 +44,12 @@
     <section class="artist-grid"></section>
 <!--  dialog window  -->
     <dialog class="modal" id="dialog-modal">
-            <button class="close">X</button>
+            <button class="close"><img src="assets/svg/close_black.svg" alt="Close Modal"></button>
             <section id="dialog-modal-content"></section>
     </dialog>
 </main>
 <footer>
-    <p>Created by <a href="https://github.com/AeselCSS">Chris Skov Sørensen</a></p>
+    <p>Created by <a href="https://github.com/AeselCSS">Chris Skov Sørensen @KEA 2023</a></p>
 </footer>
 </body>
 </html>

@@ -108,7 +108,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 8em;
+    max-height: 10em;
     padding: var(--spacing-base);
     text-align: center;
     background: rgb(17,63,103);
@@ -117,18 +117,33 @@ header {
 }
 
 header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin-top: 1em;
 }
 
+header nav .add-container {
+    float: right;
+}
+
 header nav .search-container {
+    float: left;
     display: flex;
     width: 100%;
-    max-width: 30em;
+    max-width: 55em;
     margin: 0 auto;
+}
 
+header nav .search-container img {
+    width: 1.4em;
+}
+
+header nav .search-container .filter-container {
+    width: 12em;
+    margin-left: var(--spacing-base);
+}
+
+header nav .search-container .sort-container {
+    width: 12em;
+    margin-left: var(--spacing-base);
 }
 
 footer {
@@ -141,6 +156,11 @@ footer {
     text-align: center;
     font-size: var(--font-size-sm);
     background: transparent;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--color-secondary);
 }
 
 
@@ -197,6 +217,12 @@ main .artist-grid .artist-card .artist-card-actions {
     position: absolute;
     bottom: var(--spacing-base);
     left: var(--spacing-base);
+    width: 100%;
+}
+
+main .artist-grid .artist-card .artist-card-details-button{
+    float: right;
+    margin-right: var(--spacing-xl);
 }
 
 main .artist-grid .artist-card .artist-card-favorite {
@@ -204,6 +230,93 @@ main .artist-grid .artist-card .artist-card-favorite {
     top: var(--spacing-base);
     right: var(--spacing-base);
 }
+
+main .artist-grid .artist-card .artist-card-favorite button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* input fields */
+header nav .search-container input[type="text"] {
+    width: 20em;
+    height: 2.25em;
+    padding: var(--spacing-sm);
+    border: var(--border-solid);
+    border-radius: var(--border-radius-sm);
+    font-size: var(--font-size-base);
+    transition: var(--transition);
+}
+
+header nav .search-container input[type="text"]:focus {
+    outline: none;
+    border: var(--border-solid);
+    box-shadow: var(--shadow);
+}
+
+header nav .search-container select {
+    width: 8em;
+    height: 2.25em;
+    padding: var(--spacing-sm);
+    border: var(--border-solid);
+    border-radius: var(--border-radius-sm);
+    font-size: var(--font-size-base);
+    transition: var(--transition);
+}
+
+header nav .search-container select:focus {
+    outline: none;
+    border: var(--border-solid);
+    box-shadow: var(--shadow);
+}
+
+/* buttons */
+button {
+    height: 2.25em;
+    padding: var(--spacing-sm);
+    border: var(--border-solid);
+    background: var(--color-primary);
+    border-radius: var(--border-radius-sm);
+    font-size: var(--font-size-base);
+    transition: var(--transition);
+}
+
+button:hover {
+    background: var(--color-secondary);
+    box-shadow: var(--shadow);
+}
+
+button:focus {
+    outline: none;
+    border: var(--border-solid);
+    box-shadow: var(--shadow);
+}
+
+button:disabled {
+    background: var(--color-secondary);
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+header nav .add-container button {
+    width: 2.25em;
+    padding: 0;
+}
+
+header nav .add-container button img {
+    width: 100%;
+}
+
+main .artist-grid .artist-card .artist-card-favorite button {
+    width: 2.5em;
+    padding: 0;
+}
+
+main .artist-grid .artist-card .artist-card-favorite button img {
+    width: 100%;
+}
+
+
 
 /* Media queries */
 
