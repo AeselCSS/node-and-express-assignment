@@ -1,4 +1,5 @@
 import {create} from "./api.js";
+import {refreshFavorites} from "./update-lists.js";
 
 async function createFavorite(artistId:number) {
     const response = await create('favorites', {artistId: artistId});
@@ -6,9 +7,9 @@ async function createFavorite(artistId:number) {
         console.error('Error creating favorite');
         return;
     }
-    console.log('Favorite created');
+    await refreshFavorites(response)
     // TODO: Visual feedback that the favorite was created
-    // TODO: Refresh the favorites list
+    console.log('Favorite created');
 }
 
 export {createFavorite};

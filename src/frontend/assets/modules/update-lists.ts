@@ -1,7 +1,10 @@
 import {showArtists} from "./show-artists.js";
+import {favorites} from "./is-favorite.js";
 
 let artists: Artist[] = [];
 const uniqueArtists: Set<Artist> = new Set<Artist>();
+
+
 
 async function refreshArtists(newArtistsArray: Artist[]) {
     // Iterate through the new array and add unique artists to the Set
@@ -16,6 +19,10 @@ async function refreshArtists(newArtistsArray: Artist[]) {
     await showArtists(artists);
 }
 
-// TODO add a function to refresh the favorites list
-
-export { refreshArtists };
+async function refreshFavorites(newFavoritesArray: Favorite[]) {
+    // check if favorites.length is equal to newFavoritesArray.length
+    if (favorites?.length !== newFavoritesArray.length) {
+        await showArtists(artists, newFavoritesArray);
+    }
+}
+export { refreshArtists, refreshFavorites };
