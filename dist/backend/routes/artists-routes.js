@@ -1,11 +1,6 @@
 import express from 'express';
-import { createId, readFile, writeFile } from "./helpers.js";
-const router = express.Router();
+import { createId, readFile, writeFile } from "../modules/router-utils.js";
 const artistRouter = express.Router();
-const favoriteRouter = express.Router();
-router.get('/', (_req, res) => {
-    res.send();
-});
 artistRouter.get('/artists', async (_req, res) => {
     const artists = await readFile('artists');
     if (!artists) {
@@ -56,28 +51,4 @@ artistRouter.delete('/artists/:id', async (req, res) => {
     await writeFile('artists', artists);
     res.status(200).json(artists);
 });
-favoriteRouter.get('/favorites', async (_req, res) => {
-    const favorites = await readFile('favorites');
-    res.json(favorites);
-});
-favoriteRouter.post('/favorites', async (req, res) => {
-    const favorites = await readFile('favorites');
-    const newFavorite = req.body;
-    newFavorite.id = createId(favorites);
-    favorites.push(newFavorite);
-    await writeFile('favorites', favorites);
-    res.status(201).json(favorites);
-});
-favoriteRouter.delete('/favorites/:id', async (req, res) => {
-    const favorites = await readFile('favorites');
-    const favorite = favorites.find(f => f.id === parseInt(req.params.id));
-    if (!favorite) {
-        res.status(404).json({ message: `Favorite with id ${req.params.id} not found` });
-        return;
-    }
-    const index = favorites.indexOf(favorite);
-    favorites.splice(index, 1);
-    await writeFile('favorites', favorites);
-    res.status(200).json(favorites);
-});
-export { router, artistRouter, favoriteRouter };
+export { artistRouter };

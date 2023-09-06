@@ -6,7 +6,7 @@ async function createFavorite(artistId) {
         console.error('Error creating favorite');
         return;
     }
-    console.log('Favorite created');
     await refreshFavorites(response);
+    console.log('Favorite created');
 }
 export { createFavorite };

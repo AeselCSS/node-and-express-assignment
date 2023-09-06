@@ -15,13 +15,12 @@ async function deleteFavorite(artistId) {
         console.error(`Favorite id is undefined for artist ${artistId}`);
         return;
     }
-    console.log(`Deleting favorite ${artistId}`);
     const response = await destroy('favorites', favorite.id);
     if (response instanceof Error) {
         console.error('Error deleting favorite');
         return;
     }
-    console.log('Favorite deleted');
     await refreshFavorites(response);
+    console.log('Favorite deleted');
 }
 export { deleteFavorite };
