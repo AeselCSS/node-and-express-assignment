@@ -312,11 +312,14 @@ main .artist-grid .artist-card .artist-card-favorite button {
     padding: 0;
 }
 
+main .artist-grid .artist-card .artist-card-favorite button:hover {
+    background: none;
+    box-shadow: none;
+}
+
 main .artist-grid .artist-card .artist-card-favorite button img {
     width: 100%;
 }
-
-
 
 /* Media queries */
 
