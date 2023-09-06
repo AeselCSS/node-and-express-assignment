@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600&display=swap');
+
+/* root variables */
+:root {
+    /*fonts*/
+    --font-family: 'Montserrat', sans-serif;
+    --font-size-base: 1em;
+    --font-size-sm: 0.875em;
+    --font-size-lg: 1.25em;
+    --font-size-xl: 1.5em;
+    --font-size-xxl: 2em;
+    --font-weight-thin: 100;
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-bold: 600;
+    --line-height-base: 1.3;
+    --line-height-sm: 1.1;
+    --line-height-lg: 1.5;
+    --line-height-xl: 1.7;
+    --line-height-xxl: 2;
+
+    /*colors*/
+    --color-primary: #e7eaf6;
+    --color-secondary: #a2a8d3;
+    --color-tertiary: #38598b;
+    --color-quaternary: #113f67;
+    --color-quaternary-dark: #0d2c4b;
+    --color-success: #28a745;
+    --color-failure: #dc3545;
+    --color-warning: #ffc107;
+    --color-shadow: rgba(0, 0, 0, 0.15);
+    --color-background: rgb(162,168,211);
+    --color-background-gradient: linear-gradient(325deg, rgba(162,168,211,1) 0%, rgba(56,89,139,1) 15%, rgba(17,63,103,1) 100%);
+
+    /*Borders*/
+    --border-radius: 1em;
+    --border-radius-sm: 0.5em;
+    --border-radius-lg: 1.5em;
+    --border-solid: 1px solid var(--color-secondary);
+    --border-none: none;
+
+    /*Shadows*/
+    --shadow: 0 0.5em 1em var(--color-shadow);
+    --shadow-sm: 0 0.25em 0.5em var(--color-shadow);
+    --shadow-lg: 0 1em 2em var(--color-shadow);
+    --shadow-inset: inset 0 0.5em 1em var(--color-shadow);
+    --shadow-on-hover: 0 0 0.75em var(--color-secondary);
+    --shadow-none: none;
+
+    /*Spacing*/
+    --spacing-base: 1em;
+    --spacing-sm: 0.5em;
+    --spacing-lg: 1.5em;
+    --spacing-xl: 2em;
+
+    /*Effects*/
+    --transition: all 0.3s ease-in-out;
+    --transition-fast: all 0.1s ease-in-out;
+    --transition-slow: all 0.5s ease-in-out;
+    --scale-on-hover: scale(1.01);
+}
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styling */
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden; /* Prevents horizontal scrollbar on page load - might be unnecessary later on*/
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    color: var(--color-primary);
+    background-color: var(--color-background);
+    background-image: var(--color-background-gradient);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-lg);
+}
+
+h1 {
+    font-size: var(--font-size-xxl);
+}
+
+h2 {
+    font-size: var(--font-size-xl);
+}
+
+h3 {
+    font-size: var(--font-size-lg);
+}
+
+h4 {
+    font-size: var(--font-size-base);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8em;
+    padding: var(--spacing-base);
+    text-align: center;
+    background: rgb(17,63,103);
+    background: linear-gradient(0deg, rgba(17,63,103,0) 0%, rgba(7,32,57,0.7119048302914917) 15%, rgba(7,32,57,1) 100%);
+    z-index: 100;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1em;
+}
+
+header nav .search-container {
+    display: flex;
+    width: 100%;
+    max-width: 30em;
+    margin: 0 auto;
+
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    padding: var(--spacing-sm);
+    text-align: center;
+    font-size: var(--font-size-sm);
+    background: transparent;
+}
+
+
+main {
+    margin-top: 10em;
+    padding: var(--spacing-base);
+}
+
+/* Artist Grid Styling */
+
+main .artist-grid {
+    display: grid;
+    gap: 1em;
+    padding: var(--spacing-base);
+}
+
+main .artist-grid .artist-card {
+    position: relative;
+    cursor: pointer;
+    background: var(--color-tertiary);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+main .artist-grid .artist-card:hover {
+    transform: var(--scale-on-hover);
+    box-shadow: var(--shadow-on-hover);
+}
+
+main .artist-grid .artist-card-image {
+    width: 100%;
+    height: 45%;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+main .artist-grid .artist-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+main .artist-grid .artist-card .artist-card-content {
+    padding: var(--spacing-base);
+    text-align: center;
+}
+
+main .artist-grid .artist-card .artist-card-description {
+    padding: var(--spacing-base);
+}
+
+main .artist-grid .artist-card .artist-card-actions {
+    position: absolute;
+    bottom: var(--spacing-base);
+    left: var(--spacing-base);
+}
+
+main .artist-grid .artist-card .artist-card-favorite {
+    position: absolute;
+    top: var(--spacing-base);
+    right: var(--spacing-base);
+}
+
+/* Media queries */
+
+@media (max-width: 479px) {
+    .artist-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (min-width: 480px) {
+    .artist-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 769px) {
+    .artist-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1025px) {
+    .artist-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 1201px) {
+    .artist-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
