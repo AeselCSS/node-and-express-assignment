@@ -12,6 +12,6 @@ interface Artist {
 }
 
 interface Favorite {
-    id: number;
+    id?: number;
     readonly artistId: number;
 }
