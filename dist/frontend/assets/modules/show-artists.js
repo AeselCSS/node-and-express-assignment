@@ -23,7 +23,7 @@ async function showArtists(artists) {
             <img src="${artist.image}" alt="${artist.name}">
         </div>
         <div class="artist-card-favorite">
-            <button class="artist-card-favorite-button" data-id="${artist.id}">${favorite ? '<img src="./assets/svg/star_gold.svg" alt="Favorite">' : '<img src="./assets/svg/star_outline_gold.svg" alt="Not Favorite">'}</button>
+            <button class="artist-card-favorite-button" data-id="${artist.id}">${favorite ? '<img src="../svg/star_gold.svg" alt="Favorite">' : '<img src="../svg/star_outline_gold.svg" alt="Not Favorite">'}</button>
         </div>
         <div class="artist-card-content">
             <h2>${artist.name}</h2>
@@ -34,8 +34,8 @@ async function showArtists(artists) {
         </div>
         <div class="artist-card-actions">
         <button class="artist-card-details-button" data-id="${artistId}">Show Details</button>
-        <button class="artist-card-edit-button" data-id="${artist.id}"><img src="assets/svg/edit_black.svg" alt="Edit Artist"></button>
-        <button class="artist-card-delete-button" data-id="${artist.id}"><img src="assets/svg/delete_black.svg" alt="Delete Artist"></button>
+        <button class="artist-card-edit-button" data-id="${artist.id}"><img src="../svg/edit_black.svg" alt="Edit Artist"></button>
+        <button class="artist-card-delete-button" data-id="${artist.id}"><img src="../svg/delete_black.svg" alt="Delete Artist"></button>
         </article>
         `;
             artistGrid.insertAdjacentHTML('beforeend', html);
