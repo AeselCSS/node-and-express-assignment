@@ -3,7 +3,8 @@ import express from 'express';
 import cors from 'cors';
 
 // import routes
-import { router, artistRouter, favoriteRouter } from './routes/routes.js';
+import {artistRouter} from "./routes/artists-routes.js";
+import {favoriteRouter} from "./routes/favorites-routes.js";
 
 // create express app
 const app = express();
@@ -17,8 +18,15 @@ app.use(express.json());
 // serve static files
 app.use(express.static('./dist/frontend'));
 
+
+// define root route
+app.get('/', (_req, res) => {
+    res.send();
+});
+
 // define routes
-app.use('/', router, artistRouter, favoriteRouter);
+app.use('/', artistRouter, favoriteRouter);
+
 
 // start express server
 const port = 3000;
