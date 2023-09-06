@@ -2,7 +2,7 @@ import {destroy} from "./api.js";
 import {refreshArtists} from "./update-lists.js";
 
 async function deleteArtist (id: number): Promise<void> {
-   const response = await destroy('artists', id.toString());
+   const response = await destroy('artists', id);
     if (response instanceof Error) {
         console.error('Error deleting artist');
         return;

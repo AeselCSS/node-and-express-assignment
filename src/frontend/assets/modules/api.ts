@@ -37,7 +37,7 @@ async function update(path: string, id: string, data: Artist | Favorite) {
     return await response.json();
 }
 
-async function destroy(path: string, id: string) {
+async function destroy(path: string, id: number) {
     const response =  await fetch(`${url}${path}/${id}`, {
         method: 'DELETE',
     });

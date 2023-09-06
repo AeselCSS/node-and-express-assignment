@@ -16,4 +16,6 @@ async function refreshArtists(newArtistsArray: Artist[]) {
     await showArtists(artists);
 }
 
+// TODO add a function to refresh the favorites list
+
 export { refreshArtists };
