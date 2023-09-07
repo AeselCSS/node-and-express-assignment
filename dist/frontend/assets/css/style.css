@@ -112,7 +112,7 @@ header {
     padding: var(--spacing-base);
     text-align: center;
     background: rgb(17,63,103);
-    background: linear-gradient(0deg, rgba(17,63,103,0) 0%, rgba(7,32,57,0.7119048302914917) 15%, rgba(7,32,57,1) 100%);
+    background: linear-gradient(0deg, rgba(17,63,103,0) 0%, rgba(7,32,57,0.75) 15%, rgba(7,32,57,1) 100%);
     z-index: 100;
 }
 
@@ -347,7 +347,7 @@ main .artist-grid .artist-card .artist-card-favorite button img {
     }
 }
 
-@media (min-width: 1201px) {
+@media (min-width: 1400px) {
     .artist-grid {
         grid-template-columns: repeat(5, 1fr);
     }
