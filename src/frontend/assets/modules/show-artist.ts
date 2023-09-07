@@ -1,5 +1,5 @@
 import {getOne} from "./api.js";
-import {isFavorite} from "./is-favorite.js";
+import {convertDateFormat, stringArrayAsList} from "./show-data-utils.js";
 
 async function showArtist(artistId: number) {
   const artist: Artist = await getOne('artists', artistId.toString());
@@ -8,8 +8,12 @@ async function showArtist(artistId: number) {
         console.error('No modal content found in DOM');
         return;
     }
-    // Check if the artist is a favorite
-    const favorite = await isFavorite(artistId);
+    // Convert arrays to comma seperated strings
+    const genres: string = stringArrayAsList(artist.genres);
+    const labels: string = stringArrayAsList(artist.labels);
+
+    // convert date format
+    const birthday = convertDateFormat(artist.birthday);
 
     modalContent.innerHTML = '';
     const html = /*html*/`
@@ -17,19 +21,16 @@ async function showArtist(artistId: number) {
         <div class="artist-card-image">
             <img src="${artist.image}" alt="${artist.name}">
         </div>
-        <div class="artist-card-favorite">
-            <button class="artist-card-favorite-button" data-id="${artist.id}">${favorite ? 'Unfavorite' : 'Favorite'}</button>
-        </div>
         <div class="artist-card-content">
             <h3>${artist.name}</h3>
-            <p>${artist.birthday}</p>
-            <p>${artist.activeSince}</p>
-            <p>${artist.genres}</p>
-            <p>${artist.labels}</p>
-            <p>${artist.website}</p>
+            <p>Born: ${birthday}</p>
+            <p>Active since: ${artist.activeSince}</p>
+            <p>Genres: ${genres}</p>
+            <p>Labels: ${labels}</p>
+            <p>Website: <a href="${artist.website}"></a>${artist.website}</p>
         </div>
         <div class="artist-card-description">
-            <p>${artist.shortDescription}</p>
+            <p>Short Description: ${artist.shortDescription}</p>
         </div>
         </article>
         `;
