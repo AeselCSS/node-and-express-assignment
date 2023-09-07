@@ -4,6 +4,7 @@ import { deleteArtist } from "./delete-artist.js";
 import { editArtist } from "./edit-artist.js";
 import { createFavorite } from "./create-favorite.js";
 import { deleteFavorite } from "./delete-favorite.js";
+import { stringArrayAsList } from "./show-data-utils";
 async function showArtists(artists, favoritesArray) {
     const artistGrid = document.querySelector('.artist-grid');
     if (artistGrid === null) {
@@ -13,6 +14,7 @@ async function showArtists(artists, favoritesArray) {
     artistGrid.innerHTML = '';
     for (const artist of artists) {
         let favorite = false;
+        const genres = stringArrayAsList(artist.genres);
         if (artist.id !== undefined) {
             const artistId = artist.id;
             if (favoritesArray) {
@@ -35,7 +37,7 @@ async function showArtists(artists, favoritesArray) {
                     </div>
                     <div class="artist-card-content">
                         <h2>${artist.name}</h2>
-                        <p>${artist.genres}</p>
+                        <p>${genres}</p>
                     </div>
                     <div class="artist-card-description">
                         <p>${artist.shortDescription}</p>
