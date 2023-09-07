@@ -4,7 +4,7 @@ import { deleteArtist } from "./delete-artist.js";
 import { editArtist } from "./edit-artist.js";
 import { createFavorite } from "./create-favorite.js";
 import { deleteFavorite } from "./delete-favorite.js";
-import { stringArrayAsList } from "./show-data-utils";
+import { stringArrayAsList } from "./show-data-utils.js";
 async function showArtists(artists, favoritesArray) {
     const artistGrid = document.querySelector('.artist-grid');
     if (artistGrid === null) {
