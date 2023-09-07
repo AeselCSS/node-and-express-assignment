@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Guy-Manuel de Homem-Christo",
-    "birthday": "08-02-1974",
+    "birthday": "1974-02-08",
     "activeSince": 1992,
     "genres": [
       "House",
@@ -22,9 +22,8 @@
     "shortDescription": "Guy-Manuel de Homem-Christo is a French musician and one-half of the iconic electronic music duo Daft Punk, known for their pioneering contributions to the electronic music genre."
   },
   {
-    "id": 2,
     "name": "Eric Clapton",
-    "birthday": "30-03-1945",
+    "birthday": "1945-03-30",
     "activeSince": 1963,
     "genres": [
       "Rock",
@@ -39,14 +38,15 @@
       "Reprise",
       "Surfdog"
     ],
-    "website": "https:///ericclapton.com",
+    "website": "https://ericclapton.com",
+    "shortDescription": "Prolific English blues-rock guitarist, singer, songwriter/composer, known as ",
     "image": "https://i.discogs.com/lWxPlsWaWKUaT3Te3gXeasP2ijCX9Ge-UCnp71FLLyw/rs:fit/g:sm/q:90/h:400/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE3ODI3/LTE2MzgzMDIwMDIt/MzIzNS5qcGVn.jpeg",
-    "shortDescription": "Prolific English blues-rock guitarist, singer, songwriter/composer, known as \"Slow Hand\". Recipient of eighteen Grammy. Inducted into Rock And Roll Hall of Fame & Songwriters Hall of Fame."
+    "id": 2
   },
   {
     "id": 3,
     "name": "Taylor Swift",
-    "birthday": "December 13, 1989",
+    "birthday": "1989-12-13",
     "activeSince": 2006,
     "genres": [
       "Pop",
@@ -63,7 +63,7 @@
   {
     "id": 4,
     "name": "Bob Marley",
-    "birthday": "February 6, 1945",
+    "birthday": "1945-05-11",
     "activeSince": 1962,
     "genres": [
       "Reggae"
@@ -79,7 +79,7 @@
   {
     "id": 5,
     "name": "Cat Stevens",
-    "birthday": "July 21, 1948",
+    "birthday": "1948-07-21",
     "activeSince": 1966,
     "genres": [
       "Folk",
@@ -96,7 +96,7 @@
   {
     "id": 6,
     "name": "Bob Dylan",
-    "birthday": "May 24, 1941",
+    "birthday": "1941-05-24",
     "activeSince": 1961,
     "genres": [
       "Folk",
@@ -112,7 +112,7 @@
   {
     "id": 7,
     "name": "Norah Jones",
-    "birthday": "March 30, 1979",
+    "birthday": "1979-03-30",
     "activeSince": 2002,
     "genres": [
       "Jazz",
@@ -129,7 +129,7 @@
   {
     "id": 8,
     "name": "Tracy Chapman",
-    "birthday": "March 30, 1964",
+    "birthday": "1964-03-30",
     "activeSince": 1986,
     "genres": [
       "Folk",
@@ -145,7 +145,7 @@
   {
     "id": 9,
     "name": "Drake",
-    "birthday": "October 24, 1986",
+    "birthday": "1986-10-24",
     "activeSince": 2001,
     "genres": [
       "Hip-hop",
@@ -160,9 +160,8 @@
     "shortDescription": "Drake is a Canadian rapper, singer, and songwriter known for his rap and R&B music as well as his commercial success."
   },
   {
-    "id": 10,
     "name": "Eminem",
-    "birthday": "October 17, 1972",
+    "birthday": "1972-10-17",
     "activeSince": 1988,
     "genres": [
       "Hip-hop"
@@ -172,13 +171,14 @@
       "Aftermath Entertainment"
     ],
     "website": "https://eminem.com/",
+    "shortDescription": "Eminem is a globally renowned rapper and songwriter known for his intricate lyrics and significant impact on hip-hop culture.",
     "image": "https://i.discogs.com/4B5kcHkjYnEcc_Z5-0M6n07ZrdpLRgQV5mH8fGrs7Ig/rs:fit/g:sm/q:90/h:600/w:480/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTM4NjYx/LTE2Nzg5NTY0NTAt/MjYxOC5qcGVn.jpeg",
-    "shortDescription": "Eminem is a globally renowned rapper and songwriter known for his intricate lyrics and significant impact on hip-hop culture."
+    "id": 10
   },
   {
     "id": 11,
     "name": "Gustavo Santaolalla",
-    "birthday": "August 19, 1951",
+    "birthday": "1951-08-19",
     "activeSince": 1967,
     "genres": [
       "Alternative",
@@ -192,5 +192,22 @@
     "website": "https://www.gustavosantaolalla.com/",
     "image": "https://i.discogs.com/xrxRnaN_b54HDmLJBYxjvfYlc1_BqBaPvodSVFgSleA/rs:fit/g:sm/q:90/h:500/w:500/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTIwNTI3/Mi0xNjYwMTI3MzIw/LTEzMTYuanBlZw.jpeg",
     "shortDescription": "Gustavo Santaolalla is an Argentine musician known for his alternative and folk-rock music, as well as his notable film soundtrack compositions."
+  },
+  {
+    "name": "Chris",
+    "birthday": "1986-12-18",
+    "activeSince": 2000,
+    "genres": [
+      "rock",
+      "pop"
+    ],
+    "labels": [
+      "universal",
+      "virgin"
+    ],
+    "website": "http://test.com",
+    "shortDescription": "this is a test",
+    "image": "https://www.mediastorehouse.com.au/p/164/english-lunacy-man-dressed-chicken-running-wild-24770047.jpg.webp",
+    "id": 68656
   }
 ]
