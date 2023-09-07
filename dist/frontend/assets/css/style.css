@@ -137,13 +137,29 @@ header nav .search-container img {
 }
 
 header nav .search-container .filter-container {
-    width: 12em;
+    width: 8.5em;
     margin-left: var(--spacing-base);
 }
 
+header nav .search-container .filter-container #filter {
+    width: 80%
+}
+
+header nav .search-container .filter-container #label {
+    width: 20%
+}
+
 header nav .search-container .sort-container {
-    width: 12em;
+    width: 13em;
     margin-left: var(--spacing-base);
+}
+
+header nav .search-container .sort-container #sort {
+    width: 80%
+}
+
+header nav .search-container .sort-container #label {
+    width: 20%
 }
 
 footer {
