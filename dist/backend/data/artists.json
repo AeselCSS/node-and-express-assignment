@@ -194,19 +194,21 @@
     "shortDescription": "Gustavo Santaolalla is an Argentine musician known for his alternative and folk-rock music, as well as his notable film soundtrack compositions."
   },
   {
-    "name": "Chris",
-    "birthday": "1986-12-18",
-    "activeSince": 2000,
+    "name": "Chris test",
+    "birthday": "1986-12-19",
+    "activeSince": 1999,
     "genres": [
       "Rock",
-      "Pop"
+      "Pop",
+      "Metal"
     ],
     "labels": [
       "Universal",
-      "Virgin"
+      "Virgin",
+      "Test"
     ],
-    "website": "http://test.com",
-    "shortDescription": "this is a test object, please use this for testing",
+    "website": "http://test2.com",
+    "shortDescription": "this is a test object, please use this for testing...",
     "image": "https://www.mediastorehouse.com.au/p/164/english-lunacy-man-dressed-chicken-running-wild-24770047.jpg.webp",
     "id": 68656
   },
