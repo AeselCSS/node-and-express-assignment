@@ -70,7 +70,4 @@ function getValue(selector: string) {
     return element.value;
 }
 }
-
-
-
 export {editArtist};

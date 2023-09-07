@@ -22,9 +22,9 @@ function createArtistModal() {
         <label for="activeSince">Active Since</label>
         <input type="number" id="activeSince" name="activeSince" required>
         <label for="genres">Genres</label>
-        <input type="text" id="genres" name="genres" required>
+        <input type="text" id="genres" name="genres" placeholder="Genres separated with comma" required>
         <label for="labels">Labels</label>
-        <input type="text" id="labels" name="labels" required>
+        <input type="text" id="labels" name="labels" placeholder="Labels separated with comma" required>
         <label for="website">Website</label>
         <input type="text" id="website" name="website" required>
         <label for="shortDescription">Short Description</label>

@@ -25,4 +25,4 @@ async function refreshFavorites(newFavoritesArray: Favorite[]) {
         await showArtists(artists, newFavoritesArray);
     }
 }
-export { refreshArtists, refreshFavorites };
+export { refreshArtists, refreshFavorites, artists };

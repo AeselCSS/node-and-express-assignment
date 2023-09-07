@@ -7,3 +7,8 @@ open your terminal and run the following command:
 - npm install
 - npm start
 - open your browser and go to http://localhost:3000
+
+### TODO
+- [ ] Validation on backend
+- [ ] Validation on frontend
+- [ ] Visual feedback on frontend (success/error, confirmation messages etc.)

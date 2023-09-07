@@ -18,6 +18,7 @@
                 <div class="filter-container">
                     <label for="filter"><img src="assets/svg/filter_alt_white.svg" alt="filter"></label>
                     <select name="filter" id="filter">
+                        <option value="all" selected>All</option>
                         <option value="name">Name</option>
                         <option value="genre">Genre</option>
                         <option value="label">Label</option>
@@ -26,10 +27,12 @@
                 <div class="sort-container">
                     <label for="sort"><img src="assets/svg/sort_white.svg" alt="sort"></label>
                     <select name="sort" id="sort">
-                        <option value="name">Name</option>
-                        <option value="genre">Genre</option>
-                        <option value="label">Label</option>
-                        <option value="careerStart">Career Start</option>
+                        <option value="name-az" selected>Name A-Z</option>
+                        <option value="name-za">Name Z-A</option>
+                        <option value="oldest">Oldest</option>
+                        <option value="youngest">Youngest</option>
+                        <option value="longest-career">Longest Career</option>
+                        <option value="shortest-career">Shortest Career</option>
                     </select>
                 </div>
             </div>
